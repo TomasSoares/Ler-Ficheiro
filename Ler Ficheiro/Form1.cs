@@ -44,6 +44,8 @@ namespace Ler_Ficheiro
             string texto = caixatxt.Text;
 
             char[] separator = {' '};
+            
+            text = text.Replace(Environment.NewLine, " ");
 
             int contawords = texto.Split(separator, StringSplitOptions.RemoveEmptyEntries).Length;
             label1.Text = contawords.ToString();
